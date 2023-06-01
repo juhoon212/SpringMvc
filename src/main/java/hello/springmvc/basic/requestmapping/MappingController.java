@@ -54,5 +54,11 @@ public class MappingController {
         return "ok"; 
     }
 
+//    @GetMapping("/alone")
+//    public String alonePath(@RequestParam String userId) {
+//        log.info("userId={}", userId);
+//        return "ok";
+//    }
+
 
 }

@@ -17,8 +17,8 @@ public class LogTestController {
 
         System.out.println("name = " + name);
 
-        log.trace("trace log={}", name); // trace > debug > info > warn > error
-        log.debug("debug log={}", name);
+        log.trace("trace log={}", name); // trace >> debug >> info >> warn >> error
+        log.debug("debug log={}", name); // trace >> debug >> info >> warn >> error
         log.info(" info log={}", name);
         log.warn(" warn log={}", name);
         log.error(" error log={}", name);

@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,6 +35,7 @@ public class RequestParamController {
             ) {
 
         log.info("username={}, age={}", memberName, memberAge);
+
         return "ok";
     }
 
@@ -53,6 +55,7 @@ public class RequestParamController {
     public String requestParamV4(String username, int age) {
 
         log.info("username={}, age={}", username, age);
+        
         return "ok";
     }
 
@@ -86,6 +89,7 @@ public class RequestParamController {
     @RequestMapping("/model-attribute-v2")
     public String modelAttributeV2(HelloData helloData) {
         log.info("username={}, age={}",helloData.getUsername(), helloData.getAge());
+
         return "ok";
 
     }
